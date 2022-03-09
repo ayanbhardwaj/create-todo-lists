@@ -1,0 +1,63 @@
+
+.page-title {
+  padding-top: 50px;
+  text-align: center;
+}
+
+
+.inner-windows {
+  padding-top: 50px;
+}
+
+.small-card {
+  height: 350px;
+  width: 350px;
+}
+
+.in-card-heading {
+  text-align: center;
+}
+
+.flash-messages {
+  text-align: center;
+  color: red;
+}
+
+.list-heading {
+  margin: 20px;
+}
+
+.create-list-form {
+  margin-top: 100px;
+  width: 200px;
+}
+
+.task-forms {
+  margin-top: 100px;
+}
+
+.task-form-heading {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.task-form-inner {
+  width: 250px;
+}
+
+.flash-message {
+  text-align: center;
+  color: red;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 50px;
+}
+
+.footer-container {
+  text-align: center;
+  padding: 50px;
+}
