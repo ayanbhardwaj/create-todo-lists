@@ -10,7 +10,7 @@ from forms import CreateList, RegisterForm, LoginForm, TaskForm, AddMember
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "hdkkf126dkjdfkflkdefinkmrvhsenknskndds654"
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 Bootstrap(app)
 
 ##CONNECT TO DB
