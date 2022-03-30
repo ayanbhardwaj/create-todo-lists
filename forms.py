@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField, EmailField
+from wtforms import StringField, SubmitField, PasswordField, EmailField, DateField
 from wtforms.validators import DataRequired, URL
 from flask_ckeditor import CKEditorField
 
@@ -28,8 +28,8 @@ class LoginForm(FlaskForm):
 # Task Form
 class TaskForm(FlaskForm):
     task = StringField("Task", validators=[DataRequired()])
-    start_date = StringField("Start Date")
-    due_date = StringField("Due Date")
+    start_date = DateField("Start Date", format='%Y-%m-%d')
+    due_date = DateField("Due Date", format='%Y-%m-%d')
     status = StringField("Status")
     assigned_to = StringField("Assigned To")
     submit = SubmitField("Save")

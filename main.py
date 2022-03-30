@@ -10,7 +10,7 @@ from forms import CreateList, RegisterForm, LoginForm, TaskForm, AddMember
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = "hdkkf126dkjdfkflkdefinkmrvhsenknskndds654"
 Bootstrap(app)
 
 ##CONNECT TO DB
@@ -61,8 +61,8 @@ class Task(db.Model):
     owner = relationship("User", back_populates="tasks")
     parent_list = relationship("TodoList", back_populates="tasks")
     text = db.Column(db.Text, nullable=False)
-    start_date = db.Column(db.String(250))
-    due_date = db.Column(db.String(250))
+    start_date = db.Column(db.Date)
+    due_date = db.Column(db.Date)
     status = db.Column(db.String(100))
     assigned_to = db.Column(db.String(100))
 
