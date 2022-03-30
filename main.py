@@ -14,7 +14,7 @@ app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 Bootstrap(app)
 
 ##CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///lists.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 login_manager = LoginManager()
@@ -73,6 +73,8 @@ class UserList(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     list_id = db.Column(db.Integer, db.ForeignKey('todo_lists.id'))
 
+
+db.create_all()
 
 
 @app.route('/', methods=['GET', 'POST'])
