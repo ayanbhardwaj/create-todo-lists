@@ -74,8 +74,6 @@ class UserList(db.Model):
     list_id = db.Column(db.Integer, db.ForeignKey('todo_lists.id'))
 
 
-db.create_all()
-
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
